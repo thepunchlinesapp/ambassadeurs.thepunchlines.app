@@ -78,6 +78,8 @@
     .etape.fait .case { background: var(--fait); border-color: var(--fait); }
     .etape.fait .case svg { opacity: 1; }
     .etape.fait .titre { color: var(--texte-2); text-decoration: line-through; text-decoration-color: var(--texte-3); }
+    /* Une étape cochée se réduit à son titre ; la décocher la rouvre. */
+    .etape.fait .detail, .etape.fait details { display: none; }
     .etape input:focus-visible + .case { outline: 2px solid var(--lien); outline-offset: 2px; }
     .detail { color: var(--texte-2); font-size: 15px; padding-left: 36px; display: flex; flex-direction: column; gap: 6px; }
     .detail ul { padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
