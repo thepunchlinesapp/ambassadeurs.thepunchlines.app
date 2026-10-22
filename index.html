@@ -112,6 +112,12 @@
     .bravo { display: none; text-align: center; background: var(--fait-fond); border-radius: 16px; padding: 16px; font-weight: 500; }
     .bravo.visible { display: block; }
     footer { color: var(--texte-3); font-size: 14px; text-align: center; }
+    .mission { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; }
+    .coeur { flex: none; width: 22px; height: 22px; margin-top: 2px; fill: #E0607E; }
+    .merci { background: var(--carte); border: 1px solid var(--bord); border-radius: 16px; padding: 22px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .merci .coeur { width: 30px; height: 30px; margin: 0; }
+    .merci p { color: var(--texte-2); max-width: 42ch; }
+    .merci .signature { color: var(--texte); font-weight: 500; }
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
   </style>
 </head>
@@ -120,6 +126,7 @@
   <header>
     <img class="logo" src="/assets/logo_p.png" alt="Punchlines" width="48" height="48">
     <h1>Bienvenue dans l'aventure</h1>
+    <p class="mission"><svg class="coeur" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.4.6 1.6.6 2 0 .7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span>Merci de nous aider à diffuser du positif. Chaque post que tu publies peut tomber pile au bon moment pour quelqu'un qui en a besoin.</span></p>
     <p class="chapo">Tout ce qu'il faut pour démarrer, dans l'ordre. Coche chaque étape quand c'est fait : ta progression reste enregistrée sur ce téléphone.</p>
   </header>
 
@@ -210,7 +217,7 @@
         <div class="detail"><p>Une vidéo, un carrousel ou une simple image : tous les formats comptent. Chaque post montre Punchlines, peu importe la façon. Je t'envoie des exemples et des accroches qui marchent. Envoie-moi le lien de ton premier post sur WhatsApp : je déclenche ton premier paiement.</p></div>
       </li>
     </ol>
-    <p class="bravo" id="bravo">Tout est prêt, bravo ! Rendez-vous à 2 posts par jour.</p>
+    <p class="bravo" id="bravo">Tout est prêt, bravo et merci ! Rendez-vous à 2 posts par jour.</p>
   </section>
 
   <section>
@@ -245,7 +252,14 @@
     </div>
   </section>
 
-  <footer>Une question ? Écris-moi sur WhatsApp. Harry, fondateur de Punchlines.</footer>
+  <section class="merci">
+    <svg class="coeur" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.4.6 1.6.6 2 0 .7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>
+    <h2>Merci d'être là</h2>
+    <p>Punchlines existe pour aider chacun à se parler un peu mieux. En partageant l'app, tu portes ce message bien plus loin qu'on ne le ferait seuls. On est vraiment heureux de t'avoir dans l'équipe.</p>
+    <p class="signature">Harry, fondateur de Punchlines</p>
+  </section>
+
+  <footer>Une question ? Écris-moi sur WhatsApp, je suis là.</footer>
 </main>
 
 <script>
