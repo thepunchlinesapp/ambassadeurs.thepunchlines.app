@@ -112,23 +112,31 @@
     .bravo { display: none; text-align: center; background: var(--fait-fond); border-radius: 16px; padding: 16px; font-weight: 500; }
     .bravo.visible { display: block; }
     footer { color: var(--texte-3); font-size: 14px; text-align: center; }
-    .mission { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; }
-    .coeur { flex: none; width: 22px; height: 22px; margin-top: 2px; fill: #E0607E; }
-    .merci { background: var(--carte); border: 1px solid var(--bord); border-radius: 16px; padding: 22px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
-    .merci .coeur { width: 30px; height: 30px; margin: 0; }
-    .merci p { color: var(--texte-2); max-width: 42ch; }
-    .merci .signature { color: var(--texte); font-weight: 500; }
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    .coeur { fill: #E0607E; }
+    .h1coeur .coeur { width: 24px; height: 24px; vertical-align: -2px; }
+    .pourquoi { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .pourquoi li { display: flex; gap: 12px; align-items: flex-start; color: var(--texte-2); }
+    .pourquoi strong { color: var(--texte); font-weight: 600; }
+    .pourquoi .coeur { flex: none; width: 20px; height: 20px; margin-top: 3px; }
   </style>
 </head>
 <body>
 <main>
   <header>
     <img class="logo" src="/assets/logo_p.png" alt="Punchlines" width="48" height="48">
-    <h1>Bienvenue dans l'aventure</h1>
-    <p class="mission"><svg class="coeur" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.4.6 1.6.6 2 0 .7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span>Merci de nous aider à diffuser du positif. Chaque post que tu publies peut tomber pile au bon moment pour quelqu'un qui en a besoin.</span></p>
+    <h1>Bienvenue dans l'équipe <span class="h1coeur"><svg class="coeur" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.4.6 1.6.6 2 0 .7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg></span></h1>
     <p class="chapo">Tout ce qu'il faut pour démarrer, dans l'ordre. Coche chaque étape quand c'est fait : ta progression reste enregistrée sur ce téléphone.</p>
   </header>
+
+  <section>
+    <h2>Pourquoi on fait ça</h2>
+    <ul class="pourquoi">
+      <li><svg class="coeur" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.4.6 1.6.6 2 0 .7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span><strong>Aider chacun à se parler mieux.</strong> Punchlines, ce sont des phrases simples qui redonnent confiance au quotidien.</span></li>
+      <li><svg class="coeur" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.4.6 1.6.6 2 0 .7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span><strong>Au bon moment.</strong> Sur TikTok, une seule vidéo peut changer la journée de quelqu'un.</span></li>
+      <li><svg class="coeur" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.4.6 1.6.6 2 0 .7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span><strong>Plus loin, grâce à toi.</strong> Tu portes ce message bien au-delà de ce qu'on ferait seuls. Merci.</span></li>
+    </ul>
+  </section>
 
   <div class="progression" aria-live="polite">
     <div class="progression-texte"><span id="compte">0 étape sur 7</span><span id="pourcent">0 %</span></div>
@@ -252,14 +260,7 @@
     </div>
   </section>
 
-  <section class="merci">
-    <svg class="coeur" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.4.6 1.6.6 2 0 .7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>
-    <h2>Merci d'être là</h2>
-    <p>Punchlines existe pour aider chacun à se parler un peu mieux. En partageant l'app, tu portes ce message bien plus loin qu'on ne le ferait seuls. On est vraiment heureux de t'avoir dans l'équipe.</p>
-    <p class="signature">Harry, fondateur de Punchlines</p>
-  </section>
-
-  <footer>Une question ? Écris-moi sur WhatsApp, je suis là.</footer>
+  <footer>Une question ? Écris-moi sur WhatsApp. Harry, fondateur de Punchlines.</footer>
 </main>
 
 <script>
