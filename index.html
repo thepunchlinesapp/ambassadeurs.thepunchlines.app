@@ -90,6 +90,8 @@
     figure { display: flex; flex-direction: column; gap: 6px; }
     figure img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--bord); }
     figcaption { font-size: 14px; color: var(--texte-2); }
+    .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
+    .duo figure { min-width: 0; }
 
     .infos { background: var(--carte); border: 1px solid var(--bord); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; color: var(--texte-2); font-size: 15px; }
     .infos strong { color: var(--texte); font-weight: 600; }
@@ -139,6 +141,10 @@
             <li>Inscris-toi par <strong>email</strong> avec l'adresse que je t'ai envoyée sur WhatsApp, du type <code>prenom.tiktok@thepunchlines.app</code>.</li>
             <li>Le code de vérification arrive dans ta boîte mail habituelle.</li>
           </ul>
+          <div class="duo">
+            <figure><img src="img/tiktok-1-creer.jpg" alt="Écran de connexion TikTok, lien Créer un compte entouré" loading="lazy"><figcaption>Appuie sur « Créer un compte ».</figcaption></figure>
+            <figure><img src="img/tiktok-2-email.jpg" alt="Écran Crée un compte, lien Utiliser l'adresse e-mail à la place" loading="lazy"><figcaption>Puis « Utiliser l'adresse e-mail à la place ».</figcaption></figure>
+          </div>
         </div>
       </li>
 
