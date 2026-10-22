@@ -85,6 +85,13 @@
     .detail ul { padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
     .detail code { font-family: ui-monospace, Menlo, monospace; font-size: 14px; background: var(--bg); padding: 1px 6px; border-radius: 6px; color: var(--texte); word-break: break-all; }
     .attention { color: var(--texte); font-weight: 500; }
+    .cle { background: var(--fait-fond); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; color: var(--texte); }
+    .cle strong { font-weight: 600; }
+    .etape label .titre { flex: 1; }
+    .badge { display: block; width: fit-content; font-size: 12px; font-weight: 500; color: var(--lien); background: var(--fait-fond); border-radius: 999px; padding: 2px 10px; margin-top: 6px; }
+    .etape.fait .badge { display: none; }
+    .details-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .details-list li { display: flex; flex-direction: column; gap: 2px; }
 
     details { padding-left: 36px; }
     summary { cursor: pointer; color: var(--lien); font-size: 15px; font-weight: 500; }
@@ -126,7 +133,7 @@
     <div class="accord">
       <div><strong>2 posts par jour</strong><span>sur un compte TikTok dédié</span></div>
       <div><strong>100 € par semaine</strong><span>versés en début de semaine</span></div>
-      <div><strong>Des bonus</strong><span>selon les vues de tes vidéos</span></div>
+      <div><strong>Des bonus</strong><span>selon les vues de tes posts</span></div>
       <div><strong>Frais ComeUp</strong><span>à notre charge</span></div>
     </div>
   </section>
@@ -154,13 +161,18 @@
         <label><input type="checkbox"><span class="case"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span class="titre">Remplir ton profil</span></label>
         <div class="detail">
           <p>Nom d'utilisateur, par exemple <code>prenom.punchlines</code> ou <code>prenomlovespunchlines</code>. Une photo de toi, ton prénom ou un pseudo. Une bio qui parle de Punchlines, par exemple « J'utilise l'app Punchlines pour voir la vie en rose ».</p>
+          <div class="cle">
+            <strong>Ton compte, pas une pub</strong>
+            <p>Le but : avoir l'air d'une personne normale sur TikTok, pas d'un compte créé par une marque. C'est ton compte, approprie-le. La seule différence, c'est que tu n'y postes que des choses autour de Punchlines.</p>
+            <p>Les gens zappent les pubs sur les réseaux. Ce qui marche, c'est quelqu'un qui partage honnêtement comment il utilise une app. Ne te comporte jamais comme une pub.</p>
+          </div>
           <p class="attention">Ne poste rien pendant 3 jours.</p>
         </div>
       </li>
 
       <li class="etape" data-id="jour1">
         <label><input type="checkbox"><span class="case"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span class="titre">Préparer ton compte : jour 1</span></label>
-        <div class="detail"><p>Suis au moins 20 comptes sur le bien-être, les affirmations, la pensée positive. Pendant 10 minutes, like, commente et enregistre une dizaine de vidéos sur ces thèmes. C'est ce qui apprend à TikTok à qui montrer tes vidéos.</p></div>
+        <div class="detail"><p>Suis au moins 20 comptes sur le bien-être, les affirmations, la pensée positive. Pendant 10 minutes, like, commente et enregistre une dizaine de vidéos sur ces thèmes. C'est ce qui apprend à TikTok à qui montrer tes posts.</p></div>
       </li>
 
       <li class="etape" data-id="jour2">
@@ -174,7 +186,7 @@
       </li>
 
       <li class="etape" data-id="comeup">
-        <label><input type="checkbox"><span class="case"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span class="titre">Créer ton compte ComeUp</span></label>
+        <label><input type="checkbox"><span class="case"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span class="titre">Créer ton compte ComeUp<span class="badge">Si tu n'as pas d'auto-entreprise</span></span></label>
         <div class="detail">
           <p>C'est là que tu recevras tes paiements. Fais-le pendant tes 3 jours de préparation, sur <a href="https://comeup.com/fr/become-seller" target="_blank" rel="noopener">comeup.com/fr/become-seller</a>. Tu as une auto-entreprise ? Tu peux sauter cette étape et me facturer directement.</p>
         </div>
@@ -194,24 +206,24 @@
       </li>
 
       <li class="etape" data-id="post1">
-        <label><input type="checkbox"><span class="case"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span class="titre">Publier ta première vidéo</span></label>
-        <div class="detail"><p>Chaque vidéo montre Punchlines, peu importe la façon. Je t'envoie des exemples et des accroches qui marchent. Envoie-moi le lien de ta première vidéo sur WhatsApp : je déclenche ton premier paiement.</p></div>
+        <label><input type="checkbox"><span class="case"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span class="titre">Publier ton premier post</span></label>
+        <div class="detail"><p>Une vidéo, un carrousel ou une simple image : tous les formats comptent. Chaque post montre Punchlines, peu importe la façon. Je t'envoie des exemples et des accroches qui marchent. Envoie-moi le lien de ton premier post sur WhatsApp : je déclenche ton premier paiement.</p></div>
       </li>
     </ol>
-    <p class="bravo" id="bravo">Tout est prêt, bravo ! Rendez-vous à 2 vidéos par jour.</p>
+    <p class="bravo" id="bravo">Tout est prêt, bravo ! Rendez-vous à 2 posts par jour.</p>
   </section>
 
   <section>
     <h2>Tes paiements</h2>
     <div class="infos">
-      <p>Ton <strong>premier paiement</strong> part dès ta première vidéo. Ensuite, <strong>100 € au début de chaque semaine</strong>, sur ComeUp. Les frais de la plateforme sont à notre charge.</p>
+      <p>Ton <strong>premier paiement</strong> part dès ton premier post. Ensuite, <strong>100 € au début de chaque semaine</strong>, sur ComeUp. Les frais de la plateforme sont à notre charge.</p>
     </div>
   </section>
 
   <section>
     <h2>Tes bonus</h2>
     <div class="infos">
-      <p>Chaque vidéo qui atteint un palier te rapporte un bonus. Les vues sont relevées <strong>7 jours après la publication</strong>, puis figées. On fait le compte à la fin du mois.</p>
+      <p>Chaque post qui atteint un palier te rapporte un bonus. Les vues sont relevées <strong>7 jours après la publication</strong>, puis figées. On fait le compte à la fin du mois.</p>
       <table>
         <tr><td>10 000 vues</td><td>10 €</td></tr>
         <tr><td>25 000 vues</td><td>20 €</td></tr>
@@ -220,7 +232,16 @@
         <tr><td>250 000 vues</td><td>120 €</td></tr>
         <tr><td>500 000 vues</td><td>200 €</td></tr>
       </table>
-      <p>Exemple : 4 vidéos à 100 000 vues dans le mois, c'est 4 × 60 € = <strong>240 € en plus</strong>.</p>
+      <p>Exemple : 4 posts à 100 000 vues dans le mois, c'est 4 × 60 € = <strong>240 € en plus</strong>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Les petits détails</h2>
+    <div class="infos">
+      <ul class="details-list">
+        <li><strong>Publicité</strong><span>Je peux promouvoir n'importe lequel de tes posts en publicité sur TikTok si c'est utile. Les vues de ces pubs ne changent rien à tes bonus : les vues sont relevées à 7 jours, avant toute promotion.</span></li>
+      </ul>
     </div>
   </section>
 
